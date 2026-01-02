@@ -1,0 +1,12 @@
+Episode 01: Inception
+
+(1) What is CDN? (2) What is crossorigin? (3) Product v/s Development React JS. -> Props are the children of React element with having attributes.
+
+-> React element is an object. 
+-> When a react element (object) get rendered using render function of React Dom , it gets converted into HTML.
+
+(1) CDN -> Content Delivery network.
+        Stores cached version of website static files on servers located geographically distant location that are also known as points of presence (POPs)
+        Provides such files on request of user
+
+(2) Cross origin = "Anonymous", allows the browser to display the source of origin in case of an error.
