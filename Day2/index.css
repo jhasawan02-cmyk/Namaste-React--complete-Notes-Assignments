@@ -1,0 +1,13 @@
+#heading{
+    color:red;
+}
+#root{
+    border:2px solid black;
+    padding:10px;
+    margin:10px;
+    text-align:center;
+    background-color:lightgrey;
+    border-bottom: 2px solid black;;
+    border-radius: 10px;
+    
+}

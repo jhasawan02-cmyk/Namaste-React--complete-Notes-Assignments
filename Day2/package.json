@@ -1,0 +1,29 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "this is namaste react by akshay saini",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhasawan02-cmyk/Namaste-React--complete-Notes-Assignments.git"
+  },
+  "keywords": [],
+  "author": "sawan jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhasawan02-cmyk/Namaste-React--complete-Notes-Assignments/issues"
+  },
+  "homepage": "https://github.com/jhasawan02-cmyk/Namaste-React--complete-Notes-Assignments#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}
