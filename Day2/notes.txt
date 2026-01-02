@@ -1,0 +1,40 @@
+Episode: 2 Igniting our APP
+
+(1) -> package.json is a configuration file for our packages that is for our project that we will install in our project using NPM
+
+(2) -> Bundler - Used to bundle our project file in efficient way to make it shipable/Production-ready. ex. vite, parcel, webpack, etc.
+
+(3) -> Dev. Dependencies requires while we are developing, Normal dependency is used in production.
+
+(4) -> tilde (~), (^) caret (^) -> is for Automatic minor upgradation (Preferrable) (~) -> is for any major automatic upgradation.
+
+(5) -> Package-lock.json 
+        - Keeps a hash version (integrity) 
+        -Keeps exact version of every dependency.
+
+(6) Transitive dependencies -> Dependencies for a primary dependency
+
+(6) -> We can re-install all the node modules Using package.json Hence,node_modules doesnot need to be in production (or pushed to GitHub)
+
+(7) we Donot use React via CDN
+                -New version availability
+                -Unnecessary network calls
+
+(8) Normal JS file Doesnot have import so we declare "module" when linking JS file to our HTML.
+
+(9) Parcel: -> Dev-Build / Production-Build 
+            -> Creates local server 
+            -> HMR (Hot module replacement) 
+            -> File watching Algorithm - written in C++ 
+            -> Caching - Faster builds 
+            -> Image optimization 
+            -> minification of files 
+            -> It will do Bundling of files 
+            -> Compressing of files 
+            -> Consistent Hashing 
+            -> Code splitting 
+            -> Differential Bundling 
+            -> Diagnostics 
+            -> Error Handling 
+            -> HTTPS Server 
+            -> Tree shaking algorithm i.e remove unused code
