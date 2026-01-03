@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAIA","sources":["index.css"],"sourcesContent":["#container{\r\n    border:2px solid black;\r\n    background-color: yellow;\r\n}\r\n#root h1{\r\n    color: green;\r\n}"],"names":[],"version":3,"file":"Day2.098b807a.css.map","sourceRoot":"/__parcel_source_root/"}

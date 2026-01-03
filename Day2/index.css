@@ -1,13 +1,7 @@
-#heading{
-    color:red;
-}
-#root{
+#container{
     border:2px solid black;
-    padding:10px;
-    margin:10px;
-    text-align:center;
-    background-color:lightgrey;
-    border-bottom: 2px solid black;;
-    border-radius: 10px;
-    
+    background-color: yellow;
+}
+#root h1{
+    color: green;
 }
