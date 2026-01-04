@@ -177,7 +177,7 @@
 
   // Only insert newRequire.load when it is actually used.
   // The code in this file is linted against ES5, so dynamic import is not allowed.
-  // INSERT_LOAD_HERE
+  function $parcel$resolve(url) {  url = importMap[url] || url;  return import.meta.resolve(distDir + url);}newRequire.resolve = $parcel$resolve;
 
   Object.defineProperty(newRequire, 'root', {
     get: function () {
@@ -727,13 +727,16 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _jsxRuntime = require("react/jsx-runtime");
+var _logoAvif = require("url:./image/logo.avif");
+var _logoAvifDefault = parcelHelpers.interopDefault(_logoAvif);
+var _userIconPng = require("url:./image/user-icon.png");
+var _userIconPngDefault = parcelHelpers.interopDefault(_userIconPng);
 const jxsheading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     className: "heading",
     children: "Namaste React with JSX!!"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 5,
+    lineNumber: 7,
     columnNumber: 20
 }, undefined);
 const numbber = 1000;
@@ -744,38 +747,100 @@ const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: 7
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 10,
+                lineNumber: 12,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: " This is a functional component"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 9,
+        lineNumber: 11,
         columnNumber: 3
     }, undefined);
 _c = HeadingComponent;
+//Asssignment -working
+const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _logoAvifDefault.default),
+                alt: "logo",
+                className: "pic"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 20,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                name: "search-bar",
+                type: "text",
+                placeholder: "Search here"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 21,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                children: "Search"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 22,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _userIconPngDefault.default),
+                alt: "user-icon",
+                className: "pic"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 19,
+        columnNumber: 3
+    }, undefined);
+_c1 = Header;
+const AppLayout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 28,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 29,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
+_c2 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 17,
+    lineNumber: 35,
     columnNumber: 13
 }, undefined));
-var _c;
+var _c, _c1, _c2;
 $RefreshReg$(_c, "HeadingComponent");
+$RefreshReg$(_c1, "Header");
+$RefreshReg$(_c2, "AppLayout");
 
   $parcel$ReactRefreshHelpers$5fe5.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"e5pyA","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cGCb7","react/jsx-dev-runtime":"dVPUn","react/jsx-runtime":"05iiF"}],"jMk1U":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"e5pyA","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"cGCb7","react/jsx-dev-runtime":"dVPUn","url:./image/logo.avif":"ik9f7","url:./image/user-icon.png":"6bwpV"}],"jMk1U":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("a569817e6ea559f6");
 
@@ -19737,222 +19802,12 @@ module.exports = require("ee51401569654d91");
     };
 })();
 
-},{"58362d9d82be395f":"jMk1U"}],"05iiF":[function(require,module,exports,__globalThis) {
-'use strict';
-module.exports = require("c4c10cbba9862d5f");
+},{"58362d9d82be395f":"jMk1U"}],"ik9f7":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("logo.4b6798b3.avif") + "?" + Date.now();
 
-},{"c4c10cbba9862d5f":"gKzlX"}],"gKzlX":[function(require,module,exports,__globalThis) {
-/**
- * @license React
- * react-jsx-runtime.development.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-(function() {
-    function getComponentNameFromType(type) {
-        if (null == type) return null;
-        if ("function" === typeof type) return type.$$typeof === REACT_CLIENT_REFERENCE ? null : type.displayName || type.name || null;
-        if ("string" === typeof type) return type;
-        switch(type){
-            case REACT_FRAGMENT_TYPE:
-                return "Fragment";
-            case REACT_PROFILER_TYPE:
-                return "Profiler";
-            case REACT_STRICT_MODE_TYPE:
-                return "StrictMode";
-            case REACT_SUSPENSE_TYPE:
-                return "Suspense";
-            case REACT_SUSPENSE_LIST_TYPE:
-                return "SuspenseList";
-            case REACT_ACTIVITY_TYPE:
-                return "Activity";
-        }
-        if ("object" === typeof type) switch("number" === typeof type.tag && console.error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), type.$$typeof){
-            case REACT_PORTAL_TYPE:
-                return "Portal";
-            case REACT_CONTEXT_TYPE:
-                return type.displayName || "Context";
-            case REACT_CONSUMER_TYPE:
-                return (type._context.displayName || "Context") + ".Consumer";
-            case REACT_FORWARD_REF_TYPE:
-                var innerType = type.render;
-                type = type.displayName;
-                type || (type = innerType.displayName || innerType.name || "", type = "" !== type ? "ForwardRef(" + type + ")" : "ForwardRef");
-                return type;
-            case REACT_MEMO_TYPE:
-                return innerType = type.displayName || null, null !== innerType ? innerType : getComponentNameFromType(type.type) || "Memo";
-            case REACT_LAZY_TYPE:
-                innerType = type._payload;
-                type = type._init;
-                try {
-                    return getComponentNameFromType(type(innerType));
-                } catch (x) {}
-        }
-        return null;
-    }
-    function testStringCoercion(value) {
-        return "" + value;
-    }
-    function checkKeyStringCoercion(value) {
-        try {
-            testStringCoercion(value);
-            var JSCompiler_inline_result = !1;
-        } catch (e) {
-            JSCompiler_inline_result = !0;
-        }
-        if (JSCompiler_inline_result) {
-            JSCompiler_inline_result = console;
-            var JSCompiler_temp_const = JSCompiler_inline_result.error;
-            var JSCompiler_inline_result$jscomp$0 = "function" === typeof Symbol && Symbol.toStringTag && value[Symbol.toStringTag] || value.constructor.name || "Object";
-            JSCompiler_temp_const.call(JSCompiler_inline_result, "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.", JSCompiler_inline_result$jscomp$0);
-            return testStringCoercion(value);
-        }
-    }
-    function getTaskName(type) {
-        if (type === REACT_FRAGMENT_TYPE) return "<>";
-        if ("object" === typeof type && null !== type && type.$$typeof === REACT_LAZY_TYPE) return "<...>";
-        try {
-            var name = getComponentNameFromType(type);
-            return name ? "<" + name + ">" : "<...>";
-        } catch (x) {
-            return "<...>";
-        }
-    }
-    function getOwner() {
-        var dispatcher = ReactSharedInternals.A;
-        return null === dispatcher ? null : dispatcher.getOwner();
-    }
-    function UnknownOwner() {
-        return Error("react-stack-top-frame");
-    }
-    function hasValidKey(config) {
-        if (hasOwnProperty.call(config, "key")) {
-            var getter = Object.getOwnPropertyDescriptor(config, "key").get;
-            if (getter && getter.isReactWarning) return !1;
-        }
-        return void 0 !== config.key;
-    }
-    function defineKeyPropWarningGetter(props, displayName) {
-        function warnAboutAccessingKey() {
-            specialPropKeyWarningShown || (specialPropKeyWarningShown = !0, console.error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)", displayName));
-        }
-        warnAboutAccessingKey.isReactWarning = !0;
-        Object.defineProperty(props, "key", {
-            get: warnAboutAccessingKey,
-            configurable: !0
-        });
-    }
-    function elementRefGetterWithDeprecationWarning() {
-        var componentName = getComponentNameFromType(this.type);
-        didWarnAboutElementRef[componentName] || (didWarnAboutElementRef[componentName] = !0, console.error("Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."));
-        componentName = this.props.ref;
-        return void 0 !== componentName ? componentName : null;
-    }
-    function ReactElement(type, key, props, owner, debugStack, debugTask) {
-        var refProp = props.ref;
-        type = {
-            $$typeof: REACT_ELEMENT_TYPE,
-            type: type,
-            key: key,
-            props: props,
-            _owner: owner
-        };
-        null !== (void 0 !== refProp ? refProp : null) ? Object.defineProperty(type, "ref", {
-            enumerable: !1,
-            get: elementRefGetterWithDeprecationWarning
-        }) : Object.defineProperty(type, "ref", {
-            enumerable: !1,
-            value: null
-        });
-        type._store = {};
-        Object.defineProperty(type._store, "validated", {
-            configurable: !1,
-            enumerable: !1,
-            writable: !0,
-            value: 0
-        });
-        Object.defineProperty(type, "_debugInfo", {
-            configurable: !1,
-            enumerable: !1,
-            writable: !0,
-            value: null
-        });
-        Object.defineProperty(type, "_debugStack", {
-            configurable: !1,
-            enumerable: !1,
-            writable: !0,
-            value: debugStack
-        });
-        Object.defineProperty(type, "_debugTask", {
-            configurable: !1,
-            enumerable: !1,
-            writable: !0,
-            value: debugTask
-        });
-        Object.freeze && (Object.freeze(type.props), Object.freeze(type));
-        return type;
-    }
-    function jsxDEVImpl(type, config, maybeKey, isStaticChildren, debugStack, debugTask) {
-        var children = config.children;
-        if (void 0 !== children) {
-            if (isStaticChildren) {
-                if (isArrayImpl(children)) {
-                    for(isStaticChildren = 0; isStaticChildren < children.length; isStaticChildren++)validateChildKeys(children[isStaticChildren]);
-                    Object.freeze && Object.freeze(children);
-                } else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
-            } else validateChildKeys(children);
-        }
-        if (hasOwnProperty.call(config, "key")) {
-            children = getComponentNameFromType(type);
-            var keys = Object.keys(config).filter(function(k) {
-                return "key" !== k;
-            });
-            isStaticChildren = 0 < keys.length ? "{key: someKey, " + keys.join(": ..., ") + ": ...}" : "{key: someKey}";
-            didWarnAboutKeySpread[children + isStaticChildren] || (keys = 0 < keys.length ? "{" + keys.join(": ..., ") + ": ...}" : "{}", console.error('A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />', isStaticChildren, children, keys, children), didWarnAboutKeySpread[children + isStaticChildren] = !0);
-        }
-        children = null;
-        void 0 !== maybeKey && (checkKeyStringCoercion(maybeKey), children = "" + maybeKey);
-        hasValidKey(config) && (checkKeyStringCoercion(config.key), children = "" + config.key);
-        if ("key" in config) {
-            maybeKey = {};
-            for(var propName in config)"key" !== propName && (maybeKey[propName] = config[propName]);
-        } else maybeKey = config;
-        children && defineKeyPropWarningGetter(maybeKey, "function" === typeof type ? type.displayName || type.name || "Unknown" : type);
-        return ReactElement(type, children, maybeKey, getOwner(), debugStack, debugTask);
-    }
-    function validateChildKeys(node) {
-        isValidElement(node) ? node._store && (node._store.validated = 1) : "object" === typeof node && null !== node && node.$$typeof === REACT_LAZY_TYPE && ("fulfilled" === node._payload.status ? isValidElement(node._payload.value) && node._payload.value._store && (node._payload.value._store.validated = 1) : node._store && (node._store.validated = 1));
-    }
-    function isValidElement(object) {
-        return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    var React = require("593632ccebda0d3a"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
-        return null;
-    };
-    React = {
-        react_stack_bottom_frame: function(callStackForError) {
-            return callStackForError();
-        }
-    };
-    var specialPropKeyWarningShown;
-    var didWarnAboutElementRef = {};
-    var unknownOwnerDebugStack = React.react_stack_bottom_frame.bind(React, UnknownOwner)();
-    var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
-    var didWarnAboutKeySpread = {};
-    exports.Fragment = REACT_FRAGMENT_TYPE;
-    exports.jsx = function(type, config, maybeKey) {
-        var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
-        return jsxDEVImpl(type, config, maybeKey, !1, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
-    };
-    exports.jsxs = function(type, config, maybeKey) {
-        var trackActualOwner = 1e4 > ReactSharedInternals.recentlyCreatedOwnerStacks++;
-        return jsxDEVImpl(type, config, maybeKey, !0, trackActualOwner ? Error("react-stack-top-frame") : unknownOwnerDebugStack, trackActualOwner ? createTask(getTaskName(type)) : unknownOwnerDebugTask);
-    };
-})();
+},{}],"6bwpV":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("user-icon.e0bff187.png") + "?" + Date.now();
 
-},{"593632ccebda0d3a":"jMk1U"}]},["aDCOa","4ZGjQ"], "4ZGjQ", "parcelRequirea9e5", {}, null, null, "http://localhost:1234")
+},{}]},["aDCOa","4ZGjQ"], "4ZGjQ", "parcelRequirea9e5", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=Day2.810d0550.js.map
