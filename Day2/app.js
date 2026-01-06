@@ -10,7 +10,7 @@ const Header = () => {
         </img>
       </div>
       <div className="Tag-line">
-        <h2>We serve You better !</h2>
+        <h2>We serve You better...</h2>
       </div>
       <div className="nav-items">
         <ul>
@@ -35,9 +35,11 @@ const RestaurantCard = (props) => {
       alt="res-img">
       </img>
       <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{avgRating}</h4>
+      <div className="info">
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>{costForTwo}</h4>
+        <h4>{avgRating} **</h4>
+      </div>
     </div>
   );
 };
@@ -2034,7 +2036,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="search">
-        <input type="text" placeholder="Search for restaurants and food"></input>
+        <input type="text" placeholder="Search for restaurants..."></input>
       </div>
       <div className="rest-container">
           {

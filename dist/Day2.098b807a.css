@@ -1,36 +1,40 @@
 .header {
-  border: 1px solid #000;
+  border: 2px solid #e70202cf;
+  border-radius: 5px;
   justify-content: space-between;
+  padding: 5px 10px;
   display: flex;
 }
 
 .logo {
-  border: 1px solid #863e3e;
+  cursor: pointer;
+  border: 2px #e70202cf;
   border-radius: 5px;
   width: 200px;
-  margin: 2px;
+  max-height: 150px;
+  margin: 3px;
 }
 
 .Tag-line {
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 80px;
-  margin: 5px 0;
+  min-width: 70px;
+  max-height: 90px;
+  margin: 25px 0;
   display: flex;
   overflow: hidden;
 }
 
 .Tag-line > h2 {
-  color: #e66311cf;
+  color: #e70202cf;
   word-wrap: break-word;
   max-width: 100%;
   margin: 0;
   padding: 10px 20px;
   font-size: clamp(1.5rem, 5vw, 3rem);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .nav-items {
@@ -39,25 +43,53 @@
 }
 
 .nav-items > ul {
-  justify-content: space-evenly;
+  gap: 8px;
+  padding: 1px 5px;
   display: flex;
 }
 
 .nav-items > ul > li {
-  margin: 2px;
-  padding: 10px;
-  font-size: 24px;
+  cursor: pointer;
+  color: #ea5206;
+  border: 2px #cb1616c8;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
   list-style-type: none;
 }
 
 .rest-card {
   box-sizing: border-box;
-  background-color: #f0f0f0;
-  border: 1px solid #000;
+  background-color: #f7cc0c54;
+  border: 2px solid #e37704;
+  border-radius: 5px;
   flex-direction: column;
   width: 200px;
+  max-height: fit-content;
   padding: 3px;
   display: flex;
+  overflow: hidden;
+}
+
+.rest-card > h3 {
+  white-space: nowrap;
+  border: 2px solid #f11e07;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 5px;
+  padding: 0 5px;
+  font-size: 20px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.info {
+  white-space: nowrap;
+  text-overflow: none;
+  align-items: center;
+  padding: 0 5px;
+  font-size: medium;
+  font-weight: 300;
   overflow: hidden;
 }
 
@@ -79,14 +111,27 @@
 
 .res-card > h4 {
   white-space: nowrap;
+  color: #000;
+  border: 1px solid #d84a16;
   margin: 10px 0 5px;
   font-size: 18px;
+  font-weight: 400;
   overflow: hidden;
 }
 
 .rest-container {
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: space-around;
+  gap: 16px;
   display: flex;
+}
+
+body .search input[type="text"] {
+  border: 2px solid #ea5206;
+  border-radius: 4px;
+  width: 455px;
+  margin-left: 35%;
+  padding: 8px;
+  font-size: 16px;
 }
 /*# sourceMappingURL=Day2.098b807a.css.map */
