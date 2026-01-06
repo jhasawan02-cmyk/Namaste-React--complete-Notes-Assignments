@@ -12,18 +12,24 @@
     
 }
 .Tag-line{
-    height:75px;
-    width: auto;
-    margin:5px;
+    min-height:80px;
+    width: 100%;
+    margin:5px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .Tag-line > h2{
-    font-size:45px;
+    font-size:clamp(1.5rem, 5vw, 3rem);
     font-style: italic;
     margin: 0px;
-    padding: 40px;
-    font-weight: 400px;
+    padding: 10px 20px;
+    font-weight: 400;
     color:rgba(230, 99, 17, 0.811);
+    max-width: 100%;
+    word-wrap: break-word;
 }
 .nav-items{
     border-radius:5px;
@@ -42,7 +48,6 @@
 /* rest-card */
 .rest-card{
     width:200px;
-    min-height:350px;
     border:1px solid black;
     background-color: #f0f0f0;
     padding:3px;

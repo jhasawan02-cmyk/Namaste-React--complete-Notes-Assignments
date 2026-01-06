@@ -13,18 +13,24 @@
 
 .Tag-line {
   text-align: center;
-  width: auto;
-  height: 75px;
-  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  margin: 5px 0;
+  display: flex;
+  overflow: hidden;
 }
 
 .Tag-line > h2 {
-  font-size: 45px;
-  font-style: italic;
-  font-weight: 400px;
   color: #e66311cf;
+  word-wrap: break-word;
+  max-width: 100%;
   margin: 0;
-  padding: 40px;
+  padding: 10px 20px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .nav-items {
@@ -50,7 +56,6 @@
   border: 1px solid #000;
   flex-direction: column;
   width: 200px;
-  min-height: 350px;
   padding: 3px;
   display: flex;
   overflow: hidden;

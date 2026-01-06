@@ -207,11 +207,11 @@
       });
     }
   }
-})({"cTsuW":[function(require,module,exports,__globalThis) {
+})({"aDCOa":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 52841;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -813,54 +813,1739 @@ const Header = ()=>{
 };
 _c = Header;
 const RestaurantCard = (props)=>{
+    const { mydata } = props;
+    const { cloudinaryImageId, name, cuisines, costForTwo, avgRating } = mydata?.info;
+    const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "rest-card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "res-image",
-                src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/17/ba7c34f8-2dbf-404f-b741-35843bf209b0_857156.jpg",
+                src: CDN_URL + mydata.info.cloudinaryImageId,
                 alt: "res-img"
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 29,
-                columnNumber: 5
+                lineNumber: 33,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: props.resName
+                children: name
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 32,
-                columnNumber: 5
+                lineNumber: 37,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: props.cusines
+                children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 33,
-                columnNumber: 5
+                lineNumber: 38,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "4.4 stars"
+                children: costForTwo
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 34,
-                columnNumber: 5
+                lineNumber: 39,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "38 minutes.."
+                children: avgRating
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 35,
-                columnNumber: 5
+                lineNumber: 40,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 28,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined);
 };
 _c1 = RestaurantCard;
+const reslist = [
+    {
+        "info": {
+            "id": "234875",
+            "name": "Adil Hotel",
+            "cloudinaryImageId": "gp1ityra6utvzqn6ghnv",
+            "locality": "Rautha Wada",
+            "areaName": "Chhindwara Locality",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "North Indian",
+                "Biryani",
+                "Tandoor"
+            ],
+            "avgRating": 4.3,
+            "parentId": "27123",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1.3K+",
+            "sla": {
+                "deliveryTime": 37,
+                "lastMileTravel": 11.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "11.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-13 00:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT \u20B9129"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/adil-hotel-rautha-wada-chhindwara-locality-rest234875",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "151515",
+            "name": "Gupta Bhojnalay",
+            "cloudinaryImageId": "jo9pdipf4elcuch8g55q",
+            "locality": "fulwara chowk",
+            "areaName": "Chhindwara Locality",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Fast Food",
+                "Indian",
+                "Beverages"
+            ],
+            "avgRating": 4.8,
+            "veg": true,
+            "parentId": "91635",
+            "avgRatingString": "4.8",
+            "totalRatingsString": "449",
+            "sla": {
+                "deliveryTime": 41,
+                "lastMileTravel": 11,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "11.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9999",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/gupta-bhojnalay-fulwara-chowk-chhindwara-locality-rest151515",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "151648",
+            "name": "Mr. Gurung Momo & Chinese Corner",
+            "cloudinaryImageId": "h7oibtpm7kqks8cqz3gh",
+            "locality": "Teacher's Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "Momos",
+                "Chinese",
+                "Fast Food"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "140255",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1.1K+",
+            "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 12.2,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "12.2 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT \u20B949"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/mr-gurung-momo-and-chinese-corner-teachers-colony-mohan-nagar-rest151648",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "184424",
+            "name": "Sab Ghar Tak Foods",
+            "cloudinaryImageId": "ryzswg44bt7thqzkuaj4",
+            "locality": "Sanchar Colony",
+            "areaName": "Parsia Road",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.1,
+            "parentId": "173932",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "617",
+            "sla": {
+                "deliveryTime": 46,
+                "lastMileTravel": 14.1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "14.1 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B950 OFF",
+                "subHeader": "ABOVE \u20B9199",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/sab-ghar-tak-foods-sanchar-colony-parsia-road-rest184424",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "658210",
+            "name": "The Fusion Lounge",
+            "cloudinaryImageId": "fa4944f0cfdcbca2bec1f3ab8e3db3f7",
+            "locality": "Triloki nagar",
+            "areaName": "Railway Station",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.2,
+            "parentId": "395453",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "350",
+            "sla": {
+                "deliveryTime": 45,
+                "lastMileTravel": 10.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "10.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-fusion-lounge-triloki-nagar-railway-station-rest658210",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "150591",
+            "name": "Satkar Restaurant",
+            "cloudinaryImageId": "rvxp5xbniat84r6efku2",
+            "locality": "Sinchai Colony",
+            "areaName": "Satkar Chowk",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Indian",
+                "Salads",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "veg": true,
+            "parentId": "21553",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "2.9K+",
+            "sla": {
+                "deliveryTime": 44,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
+                        "description": "Delivery!"
+                    },
+                    {
+                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png",
+                        "description": "Delivery!"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Rxawards/_CATEGORY-North%20Indian.png"
+                                }
+                            },
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/satkar-restaurant-sinchai-colony-satkar-chowk-rest150591",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "385824",
+            "name": "The Belgian Waffle Co.",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG",
+            "locality": "Sinchai Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Waffle",
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            "avgRating": 4.7,
+            "veg": true,
+            "parentId": "2233",
+            "avgRatingString": "4.7",
+            "totalRatingsString": "312",
+            "sla": {
+                "deliveryTime": 50,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-belgian-waffle-co-sinchai-colony-mohan-nagar-rest385824",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "234775",
+            "name": "Adil Hotel",
+            "cloudinaryImageId": "gp1ityra6utvzqn6ghnv",
+            "locality": "Rautha Wada",
+            "areaName": "Chhindwara Locality",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "North Indian",
+                "Biryani",
+                "Tandoor"
+            ],
+            "avgRating": 4.3,
+            "parentId": "27123",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1.3K+",
+            "sla": {
+                "deliveryTime": 37,
+                "lastMileTravel": 11.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "11.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-13 00:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT \u20B9129"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/adil-hotel-rautha-wada-chhindwara-locality-rest234875",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "181515",
+            "name": "Gupta Bhojnalay",
+            "cloudinaryImageId": "jo9pdipf4elcuch8g55q",
+            "locality": "fulwara chowk",
+            "areaName": "Chhindwara Locality",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Fast Food",
+                "Indian",
+                "Beverages"
+            ],
+            "avgRating": 4.8,
+            "veg": true,
+            "parentId": "91635",
+            "avgRatingString": "4.8",
+            "totalRatingsString": "449",
+            "sla": {
+                "deliveryTime": 41,
+                "lastMileTravel": 11,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "11.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9999",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/gupta-bhojnalay-fulwara-chowk-chhindwara-locality-rest151515",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "151658",
+            "name": "Mr. Gurung Momo & Chinese Corner",
+            "cloudinaryImageId": "h7oibtpm7kqks8cqz3gh",
+            "locality": "Teacher's Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "Momos",
+                "Chinese",
+                "Fast Food"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "140255",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1.1K+",
+            "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 12.2,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "12.2 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT \u20B949"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/mr-gurung-momo-and-chinese-corner-teachers-colony-mohan-nagar-rest151648",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "084624",
+            "name": "Sab Ghar Tak Foods",
+            "cloudinaryImageId": "ryzswg44bt7thqzkuaj4",
+            "locality": "Sanchar Colony",
+            "areaName": "Parsia Road",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.1,
+            "parentId": "173932",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "617",
+            "sla": {
+                "deliveryTime": 46,
+                "lastMileTravel": 14.1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "14.1 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B950 OFF",
+                "subHeader": "ABOVE \u20B9199",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/sab-ghar-tak-foods-sanchar-colony-parsia-road-rest184424",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "653210",
+            "name": "The Fusion Lounge",
+            "cloudinaryImageId": "fa4944f0cfdcbca2bec1f3ab8e3db3f7",
+            "locality": "Triloki nagar",
+            "areaName": "Railway Station",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.2,
+            "parentId": "395453",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "350",
+            "sla": {
+                "deliveryTime": 45,
+                "lastMileTravel": 10.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "10.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-fusion-lounge-triloki-nagar-railway-station-rest658210",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "150541",
+            "name": "Satkar Restaurant",
+            "cloudinaryImageId": "rvxp5xbniat84r6efku2",
+            "locality": "Sinchai Colony",
+            "areaName": "Satkar Chowk",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Indian",
+                "Salads",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "veg": true,
+            "parentId": "21553",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "2.9K+",
+            "sla": {
+                "deliveryTime": 44,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
+                        "description": "Delivery!"
+                    },
+                    {
+                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png",
+                        "description": "Delivery!"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Rxawards/_CATEGORY-North%20Indian.png"
+                                }
+                            },
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/satkar-restaurant-sinchai-colony-satkar-chowk-rest150591",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "185824",
+            "name": "The Belgian Waffle Co.",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG",
+            "locality": "Sinchai Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Waffle",
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            "avgRating": 4.7,
+            "veg": true,
+            "parentId": "2233",
+            "avgRatingString": "4.7",
+            "totalRatingsString": "312",
+            "sla": {
+                "deliveryTime": 50,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-belgian-waffle-co-sinchai-colony-mohan-nagar-rest385824",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "181415",
+            "name": "Gupta Bhojnalay",
+            "cloudinaryImageId": "jo9pdipf4elcuch8g55q",
+            "locality": "fulwara chowk",
+            "areaName": "Chhindwara Locality",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Fast Food",
+                "Indian",
+                "Beverages"
+            ],
+            "avgRating": 4.8,
+            "veg": true,
+            "parentId": "91635",
+            "avgRatingString": "4.8",
+            "totalRatingsString": "449",
+            "sla": {
+                "deliveryTime": 41,
+                "lastMileTravel": 11,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "11.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9999",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/gupta-bhojnalay-fulwara-chowk-chhindwara-locality-rest151515",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "151058",
+            "name": "Mr. Gurung Momo & Chinese Corner",
+            "cloudinaryImageId": "h7oibtpm7kqks8cqz3gh",
+            "locality": "Teacher's Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "Momos",
+                "Chinese",
+                "Fast Food"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "140255",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1.1K+",
+            "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 12.2,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "12.2 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "ITEMS",
+                "subHeader": "AT \u20B949"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/mr-gurung-momo-and-chinese-corner-teachers-colony-mohan-nagar-rest151648",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "085624",
+            "name": "Sab Ghar Tak Foods",
+            "cloudinaryImageId": "ryzswg44bt7thqzkuaj4",
+            "locality": "Sanchar Colony",
+            "areaName": "Parsia Road",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.1,
+            "parentId": "173932",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "617",
+            "sla": {
+                "deliveryTime": 46,
+                "lastMileTravel": 14.1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "14.1 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B950 OFF",
+                "subHeader": "ABOVE \u20B9199",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/sab-ghar-tak-foods-sanchar-colony-parsia-road-rest184424",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "5463910",
+            "name": "The Fusion Lounge",
+            "cloudinaryImageId": "fa4944f0cfdcbca2bec1f3ab8e3db3f7",
+            "locality": "Triloki nagar",
+            "areaName": "Railway Station",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "South Indian",
+                "Chinese",
+                "Beverages",
+                "Fast Food",
+                "Desserts"
+            ],
+            "avgRating": 4.2,
+            "parentId": "395453",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "350",
+            "sla": {
+                "deliveryTime": 45,
+                "lastMileTravel": 10.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "10.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-fusion-lounge-triloki-nagar-railway-station-rest658210",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "1245841",
+            "name": "Satkar Restaurant",
+            "cloudinaryImageId": "rvxp5xbniat84r6efku2",
+            "locality": "Sinchai Colony",
+            "areaName": "Satkar Chowk",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "North Indian",
+                "South Indian",
+                "Indian",
+                "Salads",
+                "Desserts"
+            ],
+            "avgRating": 4.4,
+            "veg": true,
+            "parentId": "21553",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "2.9K+",
+            "sla": {
+                "deliveryTime": 44,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
+                        "description": "Delivery!"
+                    },
+                    {
+                        "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png",
+                        "description": "Delivery!"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Rxawards/_CATEGORY-North%20Indian.png"
+                                }
+                            },
+                            {
+                                "attributes": {
+                                    "description": "Delivery!",
+                                    "imageId": "Ratnesh_Badges/Rx_Awards_2025/_Milestone%20Restaurants.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/satkar-restaurant-sinchai-colony-satkar-chowk-rest150591",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "123104",
+            "name": "The Belgian Waffle Co.",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG",
+            "locality": "Sinchai Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Waffle",
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            "avgRating": 4.7,
+            "veg": true,
+            "parentId": "2233",
+            "avgRatingString": "4.7",
+            "totalRatingsString": "312",
+            "sla": {
+                "deliveryTime": 50,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-belgian-waffle-co-sinchai-colony-mohan-nagar-rest385824",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "173104",
+            "name": "The Belgian Waffle Co.",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG",
+            "locality": "Sinchai Colony",
+            "areaName": "Mohan Nagar",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Waffle",
+                "Desserts",
+                "Ice Cream",
+                "Beverages"
+            ],
+            "avgRating": 4.7,
+            "veg": true,
+            "parentId": "2233",
+            "avgRatingString": "4.7",
+            "totalRatingsString": "312",
+            "sla": {
+                "deliveryTime": 50,
+                "lastMileTravel": 13.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "13.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2025-06-12 22:45:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {},
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {
+            "context": "seo-data-4e327c63-b967-4e28-bcdb-8f1d38fa05cd"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/city/chhindwara/the-belgian-waffle-co-sinchai-colony-mohan-nagar-rest385824",
+            "type": "WEBLINK"
+        }
+    }
+];
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -872,43 +2557,32 @@ const Body = ()=>{
                     placeholder: "Search for restaurants and food"
                 }, void 0, false, {
                     fileName: "app.js",
-                    lineNumber: 43,
+                    lineNumber: 2037,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 42,
+                lineNumber: 2036,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "rest-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "Meghana Foods",
-                        cusines: "Biryani,North Indian,Asian"
-                    }, void 0, false, {
+                children: reslist.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                        mydata: restaurant
+                    }, restaurant.info.id, false, {
                         fileName: "app.js",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                        resName: "KFC",
-                        cusines: "Burgers,fast food"
-                    }, void 0, false, {
-                        fileName: "app.js",
-                        lineNumber: 51,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                        lineNumber: 2041,
+                        columnNumber: 39
+                    }, undefined))
+            }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 45,
+                lineNumber: 2039,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 41,
+        lineNumber: 2035,
         columnNumber: 5
     }, undefined);
 };
@@ -919,18 +2593,18 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 63,
+                lineNumber: 2051,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 64,
+                lineNumber: 2052,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 62,
+        lineNumber: 2050,
         columnNumber: 5
     }, undefined);
 };
@@ -938,7 +2612,7 @@ _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 72,
+    lineNumber: 2060,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
@@ -19914,6 +21588,6 @@ module.exports = require("ee51401569654d91");
     };
 })();
 
-},{"58362d9d82be395f":"jMk1U"}]},["cTsuW","4ZGjQ"], "4ZGjQ", "parcelRequirea9e5", {}, null, null, "http://localhost:52841")
+},{"58362d9d82be395f":"jMk1U"}]},["aDCOa","4ZGjQ"], "4ZGjQ", "parcelRequirea9e5", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Day2.810d0550.js.map

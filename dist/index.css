@@ -1,0 +1,86 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  border: 1px solid #863e3e;
+  border-radius: 5px;
+  width: 200px;
+  margin: 2px;
+}
+
+.Tag-line {
+  text-align: center;
+  width: auto;
+  height: 75px;
+  margin: 5px;
+}
+
+.Tag-line > h2 {
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 400px;
+  color: #e66311cf;
+  margin: 0;
+  padding: 40px;
+}
+
+.nav-items {
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.nav-items > ul {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 2px;
+  padding: 10px;
+  font-size: 24px;
+  list-style-type: none;
+}
+
+.rest-card {
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  flex-direction: column;
+  width: 200px;
+  padding: 3px;
+  display: flex;
+  overflow: hidden;
+}
+
+.rest-card:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 15px #d84a16;
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-image {
+  object-fit: cover;
+  border-radius: 4px;
+  width: 100%;
+  height: 150px;
+}
+
+.res-card > h4 {
+  white-space: nowrap;
+  margin: 10px 0 5px;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.rest-container {
+  flex-wrap: wrap;
+  gap: 12px;
+  display: flex;
+}
+/*# sourceMappingURL=index.css.map */
