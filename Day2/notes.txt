@@ -39,7 +39,11 @@ Episode: 2 Igniting our APP
             -> HTTPS Server 
             -> Tree shaking algorithm i.e remove unused code
 
+
+
 Episode:3 Laying the foundation
+
+
 
 #j.son script to start and build a project is
         - "npm run start"/ "npm start" -> to start the project
@@ -59,4 +63,66 @@ Episode:3 Laying the foundation
 # component composition is putiing component inside a component
 
 
+
+Episode:4 Talk is cheap , show me the code
+
+
+
+
+/* design the layout and components before writing the code */
+
+# Passing a prop to a component is similar to passing an argument to a js function
+# Config. Driven UI means the UI will change as the configuration data changes
+   -> (ex. different UI for a single Website based on Geographical location of user)
+
+# Props ex. < RestaurantCard (resname="") /->
+
+ Self Explanation ==> we send this "Prop" that is created in each card </->  and then send it into the factory
+ where all these cards are beign made , defining the "Layout" for each such "Props"
+
+# Destructuring  Methods of Props recived as Para meters for card layout(i.e factory) methods;
+        Ex::
+                1 -> on the fly: ({resName,cousines})
+
+                2 -> const[resName,cousines] = Props
+                   : in this qwe are telling the programme to look into the props and make variable out of each name as well
+                   i.e here, variable name is same as the content of the prop
+
+                3 ->  normal method: in layout( props.resName,props.cousines)
+
+Self Explanation ==>  Props follow this sequence
+ 1> Kya data dalna he?(for each card)
+ 2> kese(Position/Layout) Data dalna he har ek card me
+ 3> Kitne Card me data dalna he
+ 4> Wapas bata do kitna card banaya he
+
+# Always give "Key" we we use ".Map" for number of card looping
+  -> no "key" >>> index as "key" >>>>>>>>>> unique "key" 
+
+
+
+Episode:5 Let's get hooked
+
+
+# Two types of export : 
+        1. Name export
+         ex: export const "component"
+             import {"component"} from path
+
+        2. Default export(cannot be used for more than one export)
+         ex: export default "component"
+             import "component" from "Path"
+
+# React Hooks: useState() and useEffect()  
+  => Reconciliation Algorithm(React Fibre)
+    -> React uses VirtualDOM as a representation of Html Tags which is just a nested JS Object
+  => Diff Algorithm 
+    -> React keeps  checking the original virtual dom and new virtual dom and updates the changes only  
+
+
+        
+
+
+
+ 
 
