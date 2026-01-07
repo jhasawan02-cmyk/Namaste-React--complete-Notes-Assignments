@@ -1,48 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import {useState} from "react";
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="Logo-container">
-        <img
-          className="logo" src="https://cdn.dribbble.com/userupload/16778067/file/original-d75cb39663149843b1572e4cc64681fe.jpg?resize=400x0" alt="Logo">
-        </img>
-      </div>
-      <div className="Tag-line">
-        <h2>We serve You better...</h2>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>Cart</li>
-          <li>Contact Us</li>
-          <li>About Us</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
-const RestaurantCard = (props) => {
-  const { mydata } = props;
-  const{cloudinaryImageId,name,cuisines,costForTwo,avgRating} = mydata?.info; 
-  const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-  return (
-    <div className="rest-card">
-      <img className="res-image" 
-      src= {CDN_URL + mydata.info.cloudinaryImageId}
-      alt="res-img">
-      </img>
-      <h3>{name}</h3>
-      <div className="info">
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>{costForTwo}</h4>
-        <h4>{avgRating} **</h4>
-      </div>
-    </div>
-  );
-};
 
 const reslist = [
                   {
@@ -2029,35 +1987,7 @@ const reslist = [
                       "type": "WEBLINK"
                     }
                   }
-                ]
+                ];
 
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">
-        <input type="text" placeholder="Search for restaurants..."></input>
-      </div>
-      <div className="rest-container">
-          {
-            reslist.map(restaurant => <RestaurantCard key={restaurant.info.id}mydata={restaurant}/>)
-          }  
-      </div>
-    </div>
-  )
-}
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  )
-}
-
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
-
+export default reslist;

@@ -10,17 +10,18 @@
   cursor: pointer;
   border: 2px #e70202cf;
   border-radius: 5px;
-  width: 200px;
+  width: 250px;
   max-height: 150px;
   margin: 3px;
 }
 
 .Tag-line {
   text-align: center;
-  justify-content: center;
-  align-items: center;
   min-width: 70px;
   max-height: 90px;
+  font-style: roboto;
+  justify-content: center;
+  align-items: center;
   margin: 25px 0;
   display: flex;
   overflow: hidden;
@@ -61,7 +62,7 @@
 .rest-card {
   box-sizing: border-box;
   background-color: #f7cc0c54;
-  border: 2px solid #e37704;
+  border: 3px solid #e37704;
   border-radius: 5px;
   flex-direction: column;
   width: 200px;
@@ -95,6 +96,7 @@
 
 .rest-card:hover {
   cursor: pointer;
+  border: 2px solid #e37704;
   box-shadow: 5px 5px 15px #d84a16;
 }
 
@@ -127,11 +129,20 @@
 }
 
 body .search input[type="text"] {
-  border: 2px solid #ea5206;
+  border: 2px solid #df9f26c1;
   border-radius: 4px;
   width: 455px;
   margin-left: 35%;
   padding: 8px;
+  font-size: 16px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  border: 2px solid #df9f26c1;
+  border-radius: 4px;
+  margin-left: 2px;
+  padding: 8px 12px;
   font-size: 16px;
 }
 /*# sourceMappingURL=Day2.098b807a.css.map */
