@@ -17,11 +17,10 @@
 
 .Tag-line {
   text-align: center;
-  min-width: 70px;
-  max-height: 90px;
-  font-style: roboto;
   justify-content: center;
   align-items: center;
+  min-width: 70px;
+  max-height: 90px;
   margin: 25px 0;
   display: flex;
   overflow: hidden;
@@ -56,6 +55,7 @@
   border-radius: 5px;
   padding: 5px;
   font-size: 20px;
+  font-weight: 600;
   list-style-type: none;
 }
 
@@ -80,7 +80,7 @@
   margin-top: 5px;
   padding: 0 5px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   overflow: hidden;
 }
 
@@ -97,7 +97,7 @@
 .rest-card:hover {
   cursor: pointer;
   border: 2px solid #e37704;
-  box-shadow: 5px 5px 15px #d84a16;
+  box-shadow: 0 2px 15px #f07b06f0;
 }
 
 .search {
