@@ -17,8 +17,8 @@
 }
 
 .logo {
-    width: 200px;
-    max-height: 100px;
+    width: 300px;
+    max-height: 200px;
     cursor: pointer;
     object-fit: contain;
 }
@@ -35,13 +35,13 @@
     font-size: clamp(1.2rem, 3vw, 2.2rem);
     font-style: italic;
     margin: 0;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--primary-red);
 }
 
 .nav-items > ul {
     display: flex;
-    gap: 15px;
+    gap: 8px;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -66,17 +66,20 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 2px;
 }
 
 .search input  [type="text"] {
-    width: 400px;
     padding: 10px;
     font-size: 16px;
-    border-radius: 4px;
     border: 2px solid rgba(223, 159, 38, 0.758);
     outline: none;
+    border-radius: 5px;
+    max-height: fit-content;
+    max-width: fit-content;
+    margin-top: 4px;
 }
+
 
 
 .filter-btn {

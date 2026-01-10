@@ -12,7 +12,7 @@ const Header = () => {
         </img>
       </div>
       <div className="Tag-line">
-        <h2>We serve You better...</h2>
+        <h2>We Serves You Better...</h2>
       </div>
       <div className="nav-items">
         <ul>
