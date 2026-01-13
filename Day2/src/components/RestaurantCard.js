@@ -3,20 +3,20 @@ import { CDN_URL} from "../utils/constants";
 const RestaurantCard = (props) => {
   const { mydata } = props;
 
-  const{cloudinaryImageId,name,cuisines,costForTwo,avgRating} = mydata?.info; 
+  const{banner_image_es,brand_name,main_offering,description,slug,avgRating} = mydata; 
   
 
   return (
     <div className="rest-card">
       <img className="res-image" 
-      src= {CDN_URL + mydata.info.cloudinaryImageId}
+      src= {banner_image_es}
       alt="res-img">
       </img>
-      <h3>{name}</h3>
+      <h3>{brand_name}</h3>
       <div className="info">
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>{costForTwo}</h4>
-        <h4>{avgRating} **</h4>
+        <h4>{main_offering}</h4>
+        <h4>{description || slug || "NA"}</h4>
+        <h4>{avgRating || "4.2"} **</h4>
       </div>
     </div>
   );
