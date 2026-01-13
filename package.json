@@ -15,12 +15,13 @@
   "author": "sawan jha",
   "type": "commonjs",
   "scripts": {
-    "start": "parcel Day2/index.html"
+    "start": "parcel index.html"
   },
   "devDependencies": {
     "react": "^19.2.3"
   },
   "dependencies": {
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^6.30.3"
   }
 }
