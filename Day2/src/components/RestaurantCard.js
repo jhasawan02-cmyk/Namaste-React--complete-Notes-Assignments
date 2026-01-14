@@ -12,11 +12,11 @@ const RestaurantCard = (props) => {
       src= {banner_image_es}
       alt="res-img">
       </img>
-      <h3>{brand_name}</h3>
+      <h3 className="name-link">{brand_name}</h3>
       <div className="info">
-        <h4>{main_offering}</h4>
-        <h4>{description || slug || "NA"}</h4>
-        <h4>{avgRating || "4.2"} **</h4>
+        <h4 className="main-link">{main_offering}</h4>
+        <h4 className="description-link">{description || slug || "NA"}</h4>
+        <h4 className="star-link">{avgRating || "4.2"} **</h4>
       </div>
     </div>
   );
