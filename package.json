@@ -15,7 +15,7 @@
   "author": "sawan jha",
   "type": "commonjs",
   "scripts": {
-    "start": "parcel index.html"
+    "start": ""
   },
   "devDependencies": {
     "react": "^19.2.3"
