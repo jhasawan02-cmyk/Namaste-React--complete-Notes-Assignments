@@ -1,11 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
   const [listOfResttraunts, setlistOfResttraunts] = useState([]);
-  const[filteredRestraunts,setfilteredRestraunts] = useState([]);
+  const [filteredRestraunts, setfilteredRestraunts] = useState([]);
 
   const [SearchText, setSearchText] = useState("");
 
@@ -15,7 +16,7 @@ const Body = () => {
 
   const FetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/https://www.eatsure.com/v1/api/get_restaurants_with_details?cityId=7322&storeId=10263 "
+      "https://corsproxy.io/https://www.eatsure.com/v1/api/get_restaurants_with_details?cityId=7322&storeId=10263 ",
     );
 
     const json = await data.json();
@@ -24,9 +25,13 @@ const Body = () => {
     setlistOfResttraunts(Restaurant_data);
 
     setfilteredRestraunts(Restaurant_data);
-
   };
 
+  const Onlinestatus = useOnlinestatus();
+
+  if (Onlinestatus === false) {
+    return <h1>No Internet</h1>;
+  }
 
   return listOfResttraunts.length === 0 ? (
     <Shimmer />
@@ -40,21 +45,21 @@ const Body = () => {
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
-          />
+        />
         <button
           className="SearchClick"
           onClick={() => {
             console.log(SearchText);
-            const filteredRestraunts = listOfResttraunts.filter((res) => 
-              res.brand_name.toLowerCase().includes(SearchText.toLowerCase())
+            const filteredRestraunts = listOfResttraunts.filter((res) =>
+              res.brand_name.toLowerCase().includes(SearchText.toLowerCase()),
             );
             setfilteredRestraunts(filteredRestraunts);
           }}
         >
           Search
         </button>
- 
-         {/* did not have the rating data in API so no filter option */}
+
+        {/* did not have the rating data in API so no filter option */}
 
         {/* <button
           className="filter-btn"
@@ -70,11 +75,12 @@ const Body = () => {
       </div>
       <div className="rest-container">
         {filteredRestraunts.map((res) => (
-          <Link 
-          key={res.brand_id} 
-          className="tex-link" 
-          to={"/menu/" + res.brand_id}>
-          <RestaurantCard  mydata={res} />
+          <Link
+            key={res.brand_id}
+            className="tex-link"
+            to={"/menu/" + res.brand_id}
+          >
+            <RestaurantCard mydata={res} />
           </Link>
         ))}
       </div>
@@ -83,4 +89,3 @@ const Body = () => {
 };
 
 export default Body;
-
