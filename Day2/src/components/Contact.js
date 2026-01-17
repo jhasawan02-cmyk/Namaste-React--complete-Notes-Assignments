@@ -1,6 +1,6 @@
 const Conatct = () =>{
     return(
-        <h1>this is Contact Page</h1>
+        <h1>This is Namaste React  "Contact Page"</h1>
     );
 };
 
