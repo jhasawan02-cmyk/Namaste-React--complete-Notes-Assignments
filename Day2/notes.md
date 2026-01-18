@@ -1,4 +1,4 @@
-Episode: 2 Igniting our APP
+        Episode: 2 Igniting our APP
 
 (1) -> package.json is a configuration file for our packages that is for our project that we will install in our project using NPM
 
@@ -41,7 +41,7 @@ Episode: 2 Igniting our APP
 
 
 
-Episode:3 Laying the foundation
+        Episode:3 Laying the foundation
 
 
 
@@ -64,7 +64,7 @@ Episode:3 Laying the foundation
 
 
 
-Episode:4 Talk is cheap , show me the code
+        Episode:4 Talk is cheap , show me the code
 
 
 
@@ -101,7 +101,7 @@ Self Explanation ==>  Props follow this sequence
 
 
 
-Episode:5 Let's get hooked
+        Episode:5 Let's get hooked
 
 
 # Two types of export : 
@@ -120,7 +120,141 @@ Episode:5 Let's get hooked
     -> React keeps  checking the original virtual dom and new virtual dom and updates the changes only  
 
 
+        Episode: 6 Exploring the world
+
+# Monolith Architecture
+  -> all teams of different concerns work in same project
+
+# Micro- Services
+  -> it follows single responsibility principal where each concern has it's own job
+
+  => ex. useEffect() -> will rendered after the intial render
+
+# Use-Shimmer UI for better UX
+
+# Conditional rendering
+     -> means rendering on basis of some conditions. ex => Shimmer-UI
+
+# whenever state variable update, react triggers a reconcialliation cycle(re-rendering the component)
+
+
+        Episode: 7 Finding the path
+
+# useEffect 
+ -> if no dependency array , useEffect will be called on every render
+ -> if dependency array is empty, only once at the intial render useEffectwill be called
+ -> if dependency array is binded onto something , useEffect will be called every time such binded element updates
+
+# useState
+-> Always at top of your function
+-> not outside the function, to avoid inconsistancy
+-> never use your useState inside a  if/else condition, for loop, a function
+
+# use children , "error" from react-router-dom
+# use "Link" instead of "Anchor" tag from react-router-dom
+
+# there are two-types of routing in  Web Apps
+        -> client side routing
+        -> server side routing (old ways)
+
+# client side routing
+        -> all the component network calls are made intially and then, browser just load whichever component is to be loaded
+        -> that's why these are also called "Single Page Web Apps"
+
+#Server-side souting
+        -> make multiple network calls for multiple web pages
+        -> used in old Web Apps
+
+
+        Episode8: Let's get classy
+
+# Class based component
+ -> Js class that render some JSX using render() function
+     => ex. import react from react
+                class "component name" extend ReactDOM{
+                        render(){
+                                retrun()
+                        }
+                }
+            export default "component"
+
+
+# Why do we always have to use super(props) and constructor ??
+ -> constructor sets up a component when it’s created, like opening a shop in the morning.
+ -> super(props) lets the component use features from React’s Component, especially props, so it doesn’t break
+
+# never uodate state variable directly
+
+# React life-cycle(in-sequence)
+        1.first parent component mounting phase
+        2 parent constructor called
+        3.parent component render
+        4.parent component render will be completed
         
+        5. starts life cycle of first child
+        6. 1st child contructor will be called
+        7. 1st child render will be called
+        8. starts life cycle of 2nd child
+        9. 2nd child constructor will be called
+        10.2nd child will be rendered
+                (here Actual DOM is updated as per updated virtual DOM that has been done in coomitt phase)
+        11. componentdidcommitte for 1st child
+        12. componentdidcommitte for 2nd child
+        13. componentdidcommitte for parent child
+
+-> React tries to batchup the DOM "commit" as it is an  expensive process
+
+
+
+        Episode9: Optimizing our APP
+
+
+
+# Single responsibilty principle
+ -> Each component should only do one function
+
+ -> breakdown of code into smaller codebase for better modularity (ie. readiability, testable, maintainable and  resusable) 
+
+# Custom Hooks
+ -> Hooks are like utility function
+ -> hook are helper functions, hence prefereed to create in seperate file inside the     "utils" folder
+
+ # chunking / code spliting / dynamic bundling / lazy loading / dynamic import
+  -> No big JS file
+  -> No multiple small  component js files 
+        ex.  import {lazy,suspense} from react
+
+             const grocery = Lazy(() => import (" "));
+
+                                And
+             element : <suspense fall back = {anything} <grocery /> > < / suspense>
+
+
+
+        Episode10: jo dikhta hai, vo bikta hai
+
+
+
+# ways to use CSS
+-> { Sass , Scss}, not used in production
+-> styled component, can be used in production 
+-> material UI - very popular
+-> BootStrap
+-> Ant design
+-> Tailwind CSS
+
+# Tailwind CSS 
+-> Tailwind css uses "PostCSS" to alter CSS using Js behind the scenes 
+
+
+
+
+
+
+
+
+
+
 
 
 
