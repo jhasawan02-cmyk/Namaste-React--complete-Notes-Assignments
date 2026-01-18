@@ -8,15 +8,16 @@ const Header = () => {
   const Onlinestatus = useOnlinestatus();
 
   return (
-    <div className="header">
-      <div className="Logo-container">
-        <img className="logo" src={LOGO_URL} alt="Logo"></img>
+    <div className="bg-amber-50 h-auto border flex  " >
+      <div className="border-2">
+        <img className="" src={LOGO_URL} alt="Logo"></img>
       </div>
-      <div className="Tag-line">
-        <h2>We Serves You Better...</h2>
-      </div>
-      <div className="nav-items">
-        <ul>
+
+      <div className="border-2  flex  ml-5 ">
+        <h2 className="">We Serves You Better...</h2>
+      
+      <div >
+        <ul className=" ">
           <li>
             <Link to="/" className="header_link">Home</Link>
           </li>
@@ -39,6 +40,7 @@ const Header = () => {
             Network: {Onlinestatus ? "👍" : "❌"}
           </li>
         </ul>
+      </div>
       </div>
     </div>
   );
