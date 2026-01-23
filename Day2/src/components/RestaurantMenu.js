@@ -2,13 +2,21 @@ import useRestaurantMenu from "../utils/userestaurantMenu";
 import Shimmer from "./Shimmer";
 import RestaurantCard from "./RestaurantCard";
 import { useParams } from "react-router-dom"; 
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenu = () => {
   const { brand_id } = useParams();
   const cousineInfo = useRestaurantMenu(brand_id);
+   const dispatch = useDispatch();
 
   const brandName = cousineInfo?.brand_details?.brand_name;
   const products = cousineInfo?.collections?.[1]?.products;
+
+ // onClick handler for add button
+ const  handleAddItem = (item) => {
+    dispatch(addItem(item));
+ }
 
   if (!products) return <Shimmer />;
 
@@ -29,7 +37,7 @@ const RestaurantMenu = () => {
       <div className="flex flex-col gap-6">
         {products.map((item) => (
           <div
-            className="flex flex-col-reverse md:flex-row justify-between items-center bg-white p-6 rounded-2xl border-4 border-gray-800 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 transition-transform duration-200 gap-6"
+             className="flex flex-col-reverse md:flex-row justify-between items-center bg-white p-6 rounded-2xl border-4 border-gray-800 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 transition-transform duration-200 gap-6"
             key={item.product_id}
           >
             <div className="flex-1">
@@ -58,7 +66,9 @@ const RestaurantMenu = () => {
                 <span className="text-2xl font-black text-gray-900">
                   ₹{item.price}
                 </span>
-                <button className="px-8 py-2 border-4 border-gray-800 bg-white text-gray-700 font-black rounded-xl hover:bg-orange-500 hover:text-white transition-all active:scale-95 uppercase text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none">
+                <button className="px-8 py-2 border-4 border-gray-800 bg-white text-gray-700 font-black rounded-xl hover:bg-orange-500 hover:text-white transition-all active:scale-95 uppercase text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
+                onClick={() => handleAddItem(item)}
+                >
                   Add
                 </button>
               </div>

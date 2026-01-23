@@ -2,16 +2,20 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlineStatus";
+import {useSelector} from "react-redux";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const Onlinestatus = useOnlinestatus();
 
+  //subscribing to the store using a selector
+  const cartItems = useSelector((store) => (store.cart.items));
+  console.log(cartItems);
   return (
     <div className="flex justify-between items-center px-8 py-2 bg-white shadow-md sticky top-0 z-50">
       <div className="flex items-center">
-        <img className="w-20 hover:scale-105 transition-transform duration-200" src={LOGO_URL} alt="Logo" />
-        <h2 className="ml-6 italic text-gray-500 font-medium hidden md:block">
+        <img className="w-42 hover:scale-105 transition-transform duration-200" src={LOGO_URL} alt="Logo" />
+        <h2 className="ml-15 italic text-gray-500 font-medium text-2xl hidden md:block">
           We Serves You Better...
         </h2>
       </div>
@@ -35,7 +39,7 @@ const Header = () => {
             <Link to="/contact" className="no-underline">Contact Us</Link>
           </li>
           <li className="relative hover:text-orange-500 transition-colors duration-200 cursor-pointer">
-            Cart
+           <Link to = "/cart" className="no-underline"> Cart({cartItems.length}) </Link>
           </li>
           <li>
             <button
