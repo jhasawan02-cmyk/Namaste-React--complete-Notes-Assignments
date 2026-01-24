@@ -45,17 +45,19 @@
 
 
 
-#j.son script to start and build a project is
+# j.son script to start and build a project is
         - "npm run start"/ "npm start" -> to start the project
         - "npm run build "  - is to build the project
+
 # React element is an object and when we render it into ReactDOM it becomes HTML
+
 # jsx is different from HTML having similar syntax like HTMl as js engine only understand ES
    "Parcel" transpille jsx into js using "babel"
     we use camaleCase in jsx
 
 # React component start with Upper case
 
-#Types of React components
+# Types of React components
         ->class based component(old way)
         ->function based component(new way)
           ie. a js function which return Reactelement made using jsx
@@ -161,7 +163,7 @@ Self Explanation ==>  Props follow this sequence
         -> all the component network calls are made intially and then, browser just load whichever component is to be loaded
         -> that's why these are also called "Single Page Web Apps"
 
-#Server-side souting
+# Server-side souting
         -> make multiple network calls for multiple web pages
         -> used in old Web Apps
 
