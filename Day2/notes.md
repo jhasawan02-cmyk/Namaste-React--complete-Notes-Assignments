@@ -248,6 +248,81 @@ Self Explanation ==>  Props follow this sequence
 # Tailwind CSS 
 -> Tailwind css uses "PostCSS" to alter CSS using Js behind the scenes 
 
+        Episode11: Data is the new oil
+
+# Higher-order component
+  -> A component (i.e function) that takes a component and return a component
+  -> a pure function is a function which does not alter the orginal function
+     - ex. used to add "Promoted" label on some of the cards 
+
+Note: coould not implement, because no data available in API use("Eatsure")
+Note: could not implement "Accordion UI" for restaurant , as not API data
+
+# coontrolled component
+  -> another component(parent component) is controlling the child component
+
+# Props drilling
+        -> means geting into Prop of another props of another prop and  so on
+# "React contract"
+        -> we use this so that we does not have to do "Props drilling"
+        -> we useContext(User context)
+
+Note: Do not put all data in useContext, put only those that is or will be used at multiple place or tiles 
+
+# To give/change teh useContext."value"
+ <userContext.provider value = {}> // App code// <userContext.provider> 
+
+-> It will be alter or change teh value of useContext all over the APP
+
+        can we have nested <userConetxt.provider>?
+         - For shure
+
+-> outside of the wrapping, it will have no effect
+
+# we will use "redux" an external state library instead of context
+
+        Episode12: Let's build our store
+
+-> "Redux" is  a seperate state managment library
+-> It is not mandatory
+-> "Redux" is different , "React" is different
+-> we will use "React-Redux" , and "Redux-Toolkit"
+
+        Problems of Vanilla Redux that Redux-Toolkit solves:
+         1.over complications
+         2.we had to add lot of packages to use it
+         3."Redux" used to require too much boilerplate code
+
+-> Redux is huge Js object Containing data
+-> Redux-slice are logically sepearted sections inside the redux store
+        ex. cart, user, slice, etc
+
+=> Process(in sequence)
+        1.when you click on a button
+        2.It dispatches an action
+        3.It calls an internal function
+        4.and this function modifies that "Redux-slice", this function is known as "Reducer"       function
+        5. "Store" means that particular Redux-slice
+        6. Subscribed selector- to update the modification on UI
+
+steps: install "@reduxJS/toolkit" and "react-redux"
+       Build our store
+       connect our store to our App
+       Slice(cartSlice)
+       dispatch an action
+       selector 
+
+# "Selector" is just a Hook that comes from react-redux library
+# for dispatch we have useDispatch Hook from react-redux library
+# always subscribe on a specific portion of the store, it is an efficient way
+# while creating store slice , it is "reducers" as multiple of small "reducer" are within it
+                -> while exporting it is reducer as individualy each reducer is exported
+# in vanilla redux, we used to create new state and return the new state as mutation of the state was prohibted
+# redux uses immerJs at background (in background  of redux, immerjs works on diff-algorithm)
+
+
+
+
 
 
 
