@@ -3,6 +3,7 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
   const { mydata } = props;
 
+  
   const {
     banner_image_es,
     brand_name,
