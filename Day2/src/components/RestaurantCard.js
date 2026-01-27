@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
 
   return (
     <div className="m-4 w-64 bg-white rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer group border border-transparent hover:border-gray-100">
-      <div className="relative h-44 w-full overflow-hidden">
+      <div className="relative h-44 w-full overflow-hidden border">
         <img
           className="w-full h-full object-cover"
           src={banner_image_es}
@@ -25,7 +25,7 @@ const RestaurantCard = (props) => {
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-4 border">
         <div className="flex justify-between items-start gap-2">
           <h3 className="font-extrabold text-gray-800 text-lg leading-tight line-clamp-1">
             {brand_name}
