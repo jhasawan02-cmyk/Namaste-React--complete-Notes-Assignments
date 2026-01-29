@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
   } = mydata;
 
   return (
-    <div className="m-4 w-64 bg-white rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer group border border-transparent hover:border-gray-100">
+    <div className="m-4 w-64 bg-white rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer group  hover:border-gray-100">
       <div className="relative h-44 w-full overflow-hidden border">
         <img
           className="w-full h-full object-cover"

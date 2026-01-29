@@ -8,20 +8,21 @@ const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const Onlinestatus = useOnlinestatus();
 
+
   //subscribing to the store using a selector
   const cartItems = useSelector((store) => (store.cart.items));
   console.log(cartItems);
   return (
     <div className="flex justify-between items-center px-8 py-2 bg-white shadow-md sticky top-0 z-50">
       <div className="flex items-center">
-        <img className="w-42 hover:scale-105 transition-transform duration-200" src={LOGO_URL} alt="Logo" />
-        <h2 className="ml-15 italic text-gray-500 font-medium text-2xl hidden md:block">
-          We Serves You Better...
+        <img className="w-48 hover:scale-105 transition-transform duration-200" src={LOGO_URL} alt="Logo" />
+        <h2 className="ml-25 italic text-gray-700 font-medium text-3xl hidden md:block shadow">
+          We Serve You Better...
         </h2>
       </div>
 
-      <div className="flex items-center">
-        <ul className="flex items-center gap-8 font-semibold text-gray-700">
+      <div className="flex items-center ">
+        <ul className="flex items-center gap-8 font-semibold text-gray-700 ">
           <li className="flex items-center gap-1 text-sm">
             {Onlinestatus ? (
               <span className="flex items-center gap-1 text-green-600"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Online</span>
@@ -30,20 +31,20 @@ const Header = () => {
             )}
           </li>
           <li className="hover:text-orange-500 transition-colors duration-200 cursor-pointer">
-            <Link to="/" className="no-underline">Home</Link>
+            <Link to="/" className="no-underline shadow">Home</Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-200 cursor-pointer">
-            <Link to="/about" className="no-underline">About Us</Link>
+            <Link to="/about" className="no-underline shadow">About Us</Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-200 cursor-pointer">
-            <Link to="/contact" className="no-underline">Contact Us</Link>
+            <Link to="/contact" className="no-underline shadow">Contact Us</Link>
           </li>
           <li className="relative hover:text-orange-500 transition-colors duration-200 cursor-pointer">
-           <Link to = "/cart" className="no-underline"> Cart({cartItems.length}) </Link>
+           <Link to = "/cart" className="no-underline shadow"> Cart({cartItems.length}) </Link>
           </li>
           <li>
             <button
-              className="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-200 shadow-sm active:transform active:scale-95"
+              className="px-2 py-2 bg-red-600 text-white rounded-sm hover:bg-amber-500 transition-all duration-200 shadow-sm active:transform active:scale-95"
               onClick={() => {
                 btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
               }}
